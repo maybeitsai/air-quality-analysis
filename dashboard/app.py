@@ -252,10 +252,14 @@ if st.session_state.analysis_triggered:
             if pollutant in THRESHOLDS:
                 max_value = st.session_state.filtered_data[pollutant].max()
                 if max_value > THRESHOLDS[pollutant]:
-                    st.error(f"⚠️ Peringatan: Kualitas udara melebihi batas aman untuk {pollutant}!")
-                    st.metric(label=f"Nilai Tertinggi {pollutant}", 
-                          value=f"{max_value:.2f} µg/m³", 
-                          delta=f"{max_value - THRESHOLDS[pollutant]:.2f} µg/m³")
+                    st.error(
+                        f"⚠️ Peringatan: Kualitas udara melebihi batas aman untuk {pollutant}!"
+                    )
+                    st.metric(
+                        label=f"Nilai Tertinggi {pollutant}",
+                        value=f"{max_value:.2f} µg/m³",
+                        delta=f"{max_value - THRESHOLDS[pollutant]:.2f} µg/m³",
+                    )
             else:
                 st.success(f"✅ Kualitas udara untuk {pollutant} dalam batas aman.")
 

@@ -253,9 +253,7 @@ if st.session_state.analysis_triggered:
                 max_value = st.session_state.filtered_data[pollutant].max()
 
     else:
-        st.warning(
-            "Tidak ada data yang dipilih. Silakan pilih data untuk analisis."
-        )
+        st.warning("Tidak ada data yang dipilih. Silakan pilih data untuk analisis.")
 
 else:
     st.info(

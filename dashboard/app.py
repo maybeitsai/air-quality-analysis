@@ -180,7 +180,7 @@ if st.session_state.analysis_triggered:
                             mode="lines",
                             line={
                                 "dash": "dot",
-                                "width": 5,
+                                "width": 3,
                                 "color": MA_COLOR_PALETTE[j % len(MA_COLOR_PALETTE)],
                             },
                             name=f"{station} (MA)",

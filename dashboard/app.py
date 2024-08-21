@@ -138,11 +138,29 @@ with col2:
     # Trigger analysis when the button is clicked
     if st.button("🔍Analisis"):
         analyze_data()
+        st.sidebar.success("Analisis data dimulai!")
 
 # Main content
 if st.session_state.analysis_triggered:
     if len(selected_pollutants) > 0 and len(selected_stations):
-        st.success("Analisis data dimulai!")
+
+        # Notification Feature
+        for pollutant in selected_pollutants:
+            if pollutant in THRESHOLDS:
+                max_value = st.session_state.filtered_data[pollutant].max()
+                if max_value > THRESHOLDS[pollutant]:
+                    st.error(
+                        f"⚠️ Peringatan: Kualitas udara melebihi batas aman untuk {pollutant}!"
+                    )
+                    st.metric(
+                        label=f"Nilai Tertinggi {pollutant}",
+                        value=f"{max_value:.2f} µg/m³",
+                        delta=f"{max_value - THRESHOLDS[pollutant]:.2f} µg/m³",
+                    )
+            else:
+                st.success(f"✅ Kualitas udara untuk {pollutant} dalam batas aman.")
+
+        # Analyze Trend
         st.title("📈 Analisis Tren Polutan")
         tabs = st.tabs(selected_pollutants)
 
@@ -245,23 +263,6 @@ if st.session_state.analysis_triggered:
         st.title("📊 Ringkasan Statistik")
         summary_stats = st.session_state.filtered_data[selected_pollutants].describe()
         st.dataframe(summary_stats)
-
-        # Notification Feature
-        st.title("🚨 Notifikasi Kualitas Udara")
-        for pollutant in selected_pollutants:
-            if pollutant in THRESHOLDS:
-                max_value = st.session_state.filtered_data[pollutant].max()
-                if max_value > THRESHOLDS[pollutant]:
-                    st.error(
-                        f"⚠️ Peringatan: Kualitas udara melebihi batas aman untuk {pollutant}!"
-                    )
-                    st.metric(
-                        label=f"Nilai Tertinggi {pollutant}",
-                        value=f"{max_value:.2f} µg/m³",
-                        delta=f"{max_value - THRESHOLDS[pollutant]:.2f} µg/m³",
-                    )
-            else:
-                st.success(f"✅ Kualitas udara untuk {pollutant} dalam batas aman.")
 
     else:
         st.warning("Tidak ada data yang dipilih. Silakan pilih data untuk analisis.")

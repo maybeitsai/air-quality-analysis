@@ -109,7 +109,7 @@ date_range = st.sidebar.date_input(
     "Pilih Rentang Tanggal", value=[data["datetime"].min(), data["datetime"].max()]
 )
 smoothing_method = st.sidebar.selectbox(
-    "Pilih Metode Smoothing", options=["EMA", "SMA", "None"], index=2
+    "Pilih Metode Smoothing", options=["EMA", "SMA"], index=1
 )
 smoothing_window = st.sidebar.slider(
     "Window Smoothing", min_value=1, max_value=180, value=90

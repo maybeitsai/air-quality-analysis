@@ -138,12 +138,11 @@ with col2:
     # Trigger analysis when the button is clicked
     if st.button("🔍Analisis"):
         analyze_data()
-        st.sidebar.success("Analisis data dimulai!")
 
 # Main content
 if st.session_state.analysis_triggered:
     if len(selected_pollutants) > 0 and len(selected_stations):
-
+        st.sidebar.success("Analisis data dimulai!")
         # Notification Feature
         for pollutant in selected_pollutants:
             if pollutant in THRESHOLDS:

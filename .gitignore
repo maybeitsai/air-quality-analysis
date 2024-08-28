@@ -3,3 +3,9 @@ url.txt
 note.txt
 clean.txt
 analisis_data.py
+data/monthly_stats_df.csv
+data/monthly_variation_df.csv
+data/station_variation_stats_df.csv
+data/corr_matrices_df.csv
+images/Corr Matrix.png
+analisis-data.py

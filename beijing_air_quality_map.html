@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0504569f1915c75e48754b8d96a1e3f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0504569f1915c75e48754b8d96a1e3f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0504569f1915c75e48754b8d96a1e3f7 = L.map(
+                "map_0504569f1915c75e48754b8d96a1e3f7",
+                {
+                    center: [39.9042, 116.4074],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_881bd87ab87ee11e9cb519259ee2d81d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_881bd87ab87ee11e9cb519259ee2d81d.addTo(map_0504569f1915c75e48754b8d96a1e3f7);
+        
+    
+            var marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_90f33296f560ff2e6b7b71b36a43be6f = L.marker(
+                [39.9322, 116.3467],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_f273d35bff44f9cb97d4d1bb4c9731d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_90f33296f560ff2e6b7b71b36a43be6f.setIcon(icon_f273d35bff44f9cb97d4d1bb4c9731d2);
+        
+    
+        var popup_605985882550320d7144a08e634c748d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84c7dfab169cc3e8937c99fe4afec785 = $(`<div id="html_84c7dfab169cc3e8937c99fe4afec785" style="width: 100.0%; height: 100.0%;">Stasiun: Aotizhongxin<br>Rata-rata PM2.5: 110.21<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_605985882550320d7144a08e634c748d.setContent(html_84c7dfab169cc3e8937c99fe4afec785);
+            
+        
+
+        marker_90f33296f560ff2e6b7b71b36a43be6f.bindPopup(popup_605985882550320d7144a08e634c748d)
+        ;
+
+        
+    
+    
+            var marker_65c0913d79bfc09505c5a4140e5d31c5 = L.marker(
+                [40.2208, 116.2311],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_776dc5d480c3b06cb0fd215197db5c15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_65c0913d79bfc09505c5a4140e5d31c5.setIcon(icon_776dc5d480c3b06cb0fd215197db5c15);
+        
+    
+        var popup_4efde01f49af50cca88381c072432a12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cdd0bbbdf7259161bac7d89adc5bf535 = $(`<div id="html_cdd0bbbdf7259161bac7d89adc5bf535" style="width: 100.0%; height: 100.0%;">Stasiun: Changping<br>Rata-rata PM2.5: 94.79<br>Kategori: Sedang</div>`)[0];
+                popup_4efde01f49af50cca88381c072432a12.setContent(html_cdd0bbbdf7259161bac7d89adc5bf535);
+            
+        
+
+        marker_65c0913d79bfc09505c5a4140e5d31c5.bindPopup(popup_4efde01f49af50cca88381c072432a12)
+        ;
+
+        
+    
+    
+            var marker_e8d5e33f93523156451efda4a3449342 = L.marker(
+                [40.2866, 116.2266],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_020d232093bfdd721b2ed1ec12c9b63e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e8d5e33f93523156451efda4a3449342.setIcon(icon_020d232093bfdd721b2ed1ec12c9b63e);
+        
+    
+        var popup_6b869719609bc4c5473cdfd9c6273d2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cc187e3bf142022868b11d1468cfe39 = $(`<div id="html_9cc187e3bf142022868b11d1468cfe39" style="width: 100.0%; height: 100.0%;">Stasiun: Dingling<br>Rata-rata PM2.5: 84.11<br>Kategori: Sedang</div>`)[0];
+                popup_6b869719609bc4c5473cdfd9c6273d2a.setContent(html_9cc187e3bf142022868b11d1468cfe39);
+            
+        
+
+        marker_e8d5e33f93523156451efda4a3449342.bindPopup(popup_6b869719609bc4c5473cdfd9c6273d2a)
+        ;
+
+        
+    
+    
+            var marker_c39fa09c2ae6d26fbe6c59c59017b8d0 = L.marker(
+                [39.9289, 116.4174],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_9abe42fdd0b29a40a457403bda3e97ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c39fa09c2ae6d26fbe6c59c59017b8d0.setIcon(icon_9abe42fdd0b29a40a457403bda3e97ca);
+        
+    
+        var popup_a58c87688d016cc8ff9a0223274c46fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a078bfddeae9f2ebcc9f106759dbd10d = $(`<div id="html_a078bfddeae9f2ebcc9f106759dbd10d" style="width: 100.0%; height: 100.0%;">Stasiun: Dongsi<br>Rata-rata PM2.5: 110.35<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_a58c87688d016cc8ff9a0223274c46fd.setContent(html_a078bfddeae9f2ebcc9f106759dbd10d);
+            
+        
+
+        marker_c39fa09c2ae6d26fbe6c59c59017b8d0.bindPopup(popup_a58c87688d016cc8ff9a0223274c46fd)
+        ;
+
+        
+    
+    
+            var marker_21a799da7b51096b6d95a4f82d38a770 = L.marker(
+                [39.9289, 116.36],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_cd8420e4b5857370bbe184e324d198f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_21a799da7b51096b6d95a4f82d38a770.setIcon(icon_cd8420e4b5857370bbe184e324d198f9);
+        
+    
+        var popup_b839c1d1806dffbfb6bf617ed77d0b56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae9f82467e2e4933934e0d971c897065 = $(`<div id="html_ae9f82467e2e4933934e0d971c897065" style="width: 100.0%; height: 100.0%;">Stasiun: Guanyuan<br>Rata-rata PM2.5: 109.37<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_b839c1d1806dffbfb6bf617ed77d0b56.setContent(html_ae9f82467e2e4933934e0d971c897065);
+            
+        
+
+        marker_21a799da7b51096b6d95a4f82d38a770.bindPopup(popup_b839c1d1806dffbfb6bf617ed77d0b56)
+        ;
+
+        
+    
+    
+            var marker_3b4cb17aef3199323d5f0c6057683a5c = L.marker(
+                [39.9144, 116.1844],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_ecdeb4d3c895948b168c1ad0f804f42f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3b4cb17aef3199323d5f0c6057683a5c.setIcon(icon_ecdeb4d3c895948b168c1ad0f804f42f);
+        
+    
+        var popup_8f8fbde6d53780443c0c9e693d2dd61f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99b9a64628f03034cf5e8db9aca8f3aa = $(`<div id="html_99b9a64628f03034cf5e8db9aca8f3aa" style="width: 100.0%; height: 100.0%;">Stasiun: Gucheng<br>Rata-rata PM2.5: 119.26<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_8f8fbde6d53780443c0c9e693d2dd61f.setContent(html_99b9a64628f03034cf5e8db9aca8f3aa);
+            
+        
+
+        marker_3b4cb17aef3199323d5f0c6057683a5c.bindPopup(popup_8f8fbde6d53780443c0c9e693d2dd61f)
+        ;
+
+        
+    
+    
+            var marker_8c5362ae73f4a494be02ce148847c95a = L.marker(
+                [40.3306, 116.6297],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_e9505c84e2527fd3737cfd1fe4e5ab87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c5362ae73f4a494be02ce148847c95a.setIcon(icon_e9505c84e2527fd3737cfd1fe4e5ab87);
+        
+    
+        var popup_9d74148a1736373d05a80e6a9322945c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a1215847632559cd97176b7225d97c4 = $(`<div id="html_6a1215847632559cd97176b7225d97c4" style="width: 100.0%; height: 100.0%;">Stasiun: Huairou<br>Rata-rata PM2.5: 92.42<br>Kategori: Sedang</div>`)[0];
+                popup_9d74148a1736373d05a80e6a9322945c.setContent(html_6a1215847632559cd97176b7225d97c4);
+            
+        
+
+        marker_8c5362ae73f4a494be02ce148847c95a.bindPopup(popup_9d74148a1736373d05a80e6a9322945c)
+        ;
+
+        
+    
+    
+            var marker_2d90c286b2ff0d0f2bcd37641937ae0f = L.marker(
+                [39.9367, 116.4613],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_44ac693e66e11da6f3b0d4bade574659 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2d90c286b2ff0d0f2bcd37641937ae0f.setIcon(icon_44ac693e66e11da6f3b0d4bade574659);
+        
+    
+        var popup_55704e4c8d031f4a543ff99f308f357c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1d2e46039c2567cc3e10158a4b3ee42 = $(`<div id="html_f1d2e46039c2567cc3e10158a4b3ee42" style="width: 100.0%; height: 100.0%;">Stasiun: Nongzhanguan<br>Rata-rata PM2.5: 109.38<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_55704e4c8d031f4a543ff99f308f357c.setContent(html_f1d2e46039c2567cc3e10158a4b3ee42);
+            
+        
+
+        marker_2d90c286b2ff0d0f2bcd37641937ae0f.bindPopup(popup_55704e4c8d031f4a543ff99f308f357c)
+        ;
+
+        
+    
+    
+            var marker_640dadf3f3f903c1aeb2b8c6740d4c67 = L.marker(
+                [40.1255, 116.6561],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_1fdf7a01b70374ec31448ce433ad0f7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_640dadf3f3f903c1aeb2b8c6740d4c67.setIcon(icon_1fdf7a01b70374ec31448ce433ad0f7d);
+        
+    
+        var popup_f231c08da995e7f1241730681777a810 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e6b08f32681ce9edd6289d1d19a2784 = $(`<div id="html_1e6b08f32681ce9edd6289d1d19a2784" style="width: 100.0%; height: 100.0%;">Stasiun: Shunyi<br>Rata-rata PM2.5: 99.27<br>Kategori: Sedang</div>`)[0];
+                popup_f231c08da995e7f1241730681777a810.setContent(html_1e6b08f32681ce9edd6289d1d19a2784);
+            
+        
+
+        marker_640dadf3f3f903c1aeb2b8c6740d4c67.bindPopup(popup_f231c08da995e7f1241730681777a810)
+        ;
+
+        
+    
+    
+            var marker_57598270d11bc340ed42b03b6bb927da = L.marker(
+                [39.8806, 116.4078],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_d7aa98c50601d786bd0d95a28e594477 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_57598270d11bc340ed42b03b6bb927da.setIcon(icon_d7aa98c50601d786bd0d95a28e594477);
+        
+    
+        var popup_1b6ad59f20b5cecc978af24c7db3a118 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21f073e1b5ed9825ec7bd9197c092892 = $(`<div id="html_21f073e1b5ed9825ec7bd9197c092892" style="width: 100.0%; height: 100.0%;">Stasiun: Tiantan<br>Rata-rata PM2.5: 106.54<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_1b6ad59f20b5cecc978af24c7db3a118.setContent(html_21f073e1b5ed9825ec7bd9197c092892);
+            
+        
+
+        marker_57598270d11bc340ed42b03b6bb927da.bindPopup(popup_1b6ad59f20b5cecc978af24c7db3a118)
+        ;
+
+        
+    
+    
+            var marker_e9abc1f042456a77665ae8f8ca11e07b = L.marker(
+                [39.9866, 116.2866],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_02c11986fcc87fa37158d6451ed3d15b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e9abc1f042456a77665ae8f8ca11e07b.setIcon(icon_02c11986fcc87fa37158d6451ed3d15b);
+        
+    
+        var popup_460e8ca344582357fd09fc1a42c8e8b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_560722b56792e2f4e40ab91443282a27 = $(`<div id="html_560722b56792e2f4e40ab91443282a27" style="width: 100.0%; height: 100.0%;">Stasiun: Wanliu<br>Rata-rata PM2.5: 110.71<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_460e8ca344582357fd09fc1a42c8e8b6.setContent(html_560722b56792e2f4e40ab91443282a27);
+            
+        
+
+        marker_e9abc1f042456a77665ae8f8ca11e07b.bindPopup(popup_460e8ca344582357fd09fc1a42c8e8b6)
+        ;
+
+        
+    
+    
+            var marker_6fe4bc4495db7e4da86186a5f2818a48 = L.marker(
+                [39.8783, 116.3522],
+                {}
+            ).addTo(marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b);
+        
+    
+            var icon_96a69f1d013b9f6af6e32b2d6a5a80f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_6fe4bc4495db7e4da86186a5f2818a48.setIcon(icon_96a69f1d013b9f6af6e32b2d6a5a80f8);
+        
+    
+        var popup_d9b15887df6171294c18b54407b3f898 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e84f9026b2a9e958801dacf44fb193e = $(`<div id="html_7e84f9026b2a9e958801dacf44fb193e" style="width: 100.0%; height: 100.0%;">Stasiun: Wanshouxigong<br>Rata-rata PM2.5: 112.51<br>Kategori: Tidak Sehat untuk Kelompok Sensitif</div>`)[0];
+                popup_d9b15887df6171294c18b54407b3f898.setContent(html_7e84f9026b2a9e958801dacf44fb193e);
+            
+        
+
+        marker_6fe4bc4495db7e4da86186a5f2818a48.bindPopup(popup_d9b15887df6171294c18b54407b3f898)
+        ;
+
+        
+    
+    
+            marker_cluster_fb6d6a2f7bf3e4aec32773b12815612b.addTo(map_0504569f1915c75e48754b8d96a1e3f7);
+        
+</script>
+</html>
